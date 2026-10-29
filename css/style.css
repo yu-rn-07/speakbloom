@@ -202,6 +202,67 @@ nav a {
   color: #f5b800;
 }
 
+/* プロブレム */
+.problems {
+  padding: 80px 0;
+}
+.problems-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.problems h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.problems-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.problems .card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+}
+.problems .card img {
+  display: block;
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.problems .card p {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 12px 10px 0;
+}
+.problems-arrow {
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 18px solid var(--color-blue);
+  margin: 30px auto 22px;
+}
+.problems-message {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.problems-logo {
+  color: var(--color-blue);
+  font-size: 24px;
+  font-weight: 700;
+}
+.problems-minute {
+  color: var(--color-accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
@@ -297,5 +358,27 @@ nav a {
   }
   .hero-star {
     font-size: 20px;
+  }
+
+  /* プロブレム */
+  .problems-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .problems-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .problems h2 {
+    font-size: 30px;
+  }
+  .problems .card img {
+    width: 90px;
+    height: 85px;
+  }
+  .problems-arrow,
+  .problems-message {
+    display: none;
   }
 }
