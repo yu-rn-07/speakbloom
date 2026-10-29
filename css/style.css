@@ -262,6 +262,28 @@ nav a {
   font-size: 22px;
   font-weight: 700;
 }
+/* アバウト */
+.about-inner {
+  display: flex;
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: center;
+}
+.about-image {
+  width: calc(50% - 15px);
+}
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.about-content {
+  width: calc(50% - 15px);
+}
+.about-logo {
+  font-size: 30px;
+}
 
 @media (max-width: 768px) {
   /* ヘッダー */
@@ -361,11 +383,13 @@ nav a {
   }
 
   /* プロブレム */
+  .problems {
+    padding: 20px 0;
+  }
   .problems-inner {
     width: calc(100% - 40px);
     max-width: none;
     margin: 0 auto;
-    padding-top: 10px;
   }
   .problems-card {
     grid-template-columns: repeat(2, 1fr);
@@ -380,5 +404,25 @@ nav a {
   .problems-arrow,
   .problems-message {
     display: none;
+  }
+  /* アバウト */
+  .about {
+    padding: 60px 0 20px;
+  }
+  .about-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .about-image {
+    width: 100%;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .about h2 {
+    margin: 0;
   }
 }
