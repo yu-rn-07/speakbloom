@@ -13,3 +13,26 @@ navLinks.forEach(function (link) {
     menuButton.classList.remove("open");
   });
 });
+
+// レッスンUIタブ
+const lessonTabs = document.querySelectorAll(".lesson-tab button");
+const lessonPanels = document.querySelectorAll(".lesson-panel");
+
+lessonTabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    const target = tab.dataset.tab;
+    lessonTabs.forEach(function (item) {
+      item.classList.remove("active");
+    });
+    lessonPanels.forEach(function (panel) {
+      panel.classList.remove("active");
+    });
+    tab.classList.add("active");
+
+    lessonPanels.forEach(function (panel) {
+      if (panel.dataset.content === target) {
+        panel.classList.add("active");
+      }
+    });
+  });
+});

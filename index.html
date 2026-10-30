@@ -200,28 +200,83 @@
       </section>
 
       <section class="lesson" id="lesson">
-        <h2>あなたにあったレッスンを</h2>
-        <div class="">
-          <p>日常英会話</p>
-          <p>ビジネス英会話</p>
-          <p>旅行英会話</p>
-        </div>
-        <div class="lesson-card">
-          <div class="card">
-            <div class="image">
-              <img src="" />
+        <div class="lesson-inner">
+          <h2>あなたにあったレッスンを</h2>
+          <div class="lesson-tab">
+            <button type="button" data-tab="daily">日常英会話</button>
+            <button type="button" data-tab="business" class="active">
+              ビジネス英会話
+            </button>
+            <button type="button" data-tab="travel">旅行英会話</button>
+          </div>
+          <div class="lesson-card">
+            <div class="lesson-panel" data-content="daily">
+              <div class="image">
+                <img
+                  src="images/dailylesson.png"
+                  alt="オンライン英会話を受講する女性"
+                />
+              </div>
+              <div class="content">
+                <p class="lesson-type">Daily Conversation</p>
+                <h3>日常英会話</h3>
+                <p class="lesson-description">
+                  自己紹介や趣味、ショッピングなど、<br />
+                  日常生活で使える英会話を学びます。
+                </p>
+                <div class="lesson-recommend">
+                  <p>こんな方におすすめ</p>
+                  <ul>
+                    <li>英語で気軽に会話ができるようになりたい</li>
+                    <li>海外の友達を作りたい</li>
+                    <li>リスニング・スピーキングに自信をつけたい</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="content">
-              <p>Business</p>
-              <h3>ビジネス英会話</h3>
-              <p>
-                会議・メール・プレゼンなど、仕事で使える実践的な英語を学びます。
-              </p>
-              <div class="">
-                <p>こんな方におすすめ</p>
-                <p>海外との仕事がある</p>
-                <p>英語で会議に参加したい</p>
-                <p>仕事で使える表現を身につけたい</p>
+            <div class="lesson-panel active" data-content="business">
+              <div class="image">
+                <img
+                  src="images/businesslesson.png"
+                  alt="ビジネス英会話を受講する男性"
+                />
+              </div>
+              <div class="content">
+                <p class="lesson-type">Business</p>
+                <h3>ビジネス英会話</h3>
+                <p class="lesson-description">
+                  会議・メール・プレゼンなど、<br />
+                  仕事で使える実践的な英語を学びます。
+                </p>
+                <div class="lesson-recommend">
+                  <p>こんな方におすすめ</p>
+                  <ul>
+                    <li>海外との仕事がある</li>
+                    <li>英語で会議に参加したい</li>
+                    <li>仕事で使える表現を身につけたい</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="lesson-panel" data-content="travel">
+              <div class="image">
+                <img src="images/travellesson.png" alt="海外旅行を楽しむ女性" />
+              </div>
+              <div class="content">
+                <p class="lesson-type">Travel</p>
+                <h3>旅行英会話</h3>
+                <p class="lesson-description">
+                  空港・ホテル・観光・レストランなど、<br />
+                  旅行先で使える実践的な英語を学びます。
+                </p>
+                <div class="lesson-recommend">
+                  <p>こんな方におすすめ</p>
+                  <ul>
+                    <li>海外旅行をもっと楽しみたい</li>
+                    <li>空港やホテルでスムーズにやりとりしたい</li>
+                    <li>現地でのトラブルにも対応できるようにしたい</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

@@ -262,6 +262,7 @@ nav a {
   font-size: 22px;
   font-weight: 700;
 }
+
 /* サービス紹介 */
 .about-inner {
   display: flex;
@@ -391,6 +392,104 @@ nav a {
   font-weight: 700;
   margin: 12px 10px 0;
 }
+/* レッスン */
+.lesson {
+  padding: 100px 0;
+}
+.lesson-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.lesson h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.lesson-tab {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  gap: 5px;
+}
+.lesson-tab button {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  background-color: var(--color-light-blue);
+  color: var(--color-main);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+}
+.lesson-tab button:first-child {
+  border-radius: 8px 8px 0 8px;
+}
+.lesson-tab button:last-child {
+  border-radius: 8px 8px 8px 0;
+}
+.lesson-tab button.active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.lesson-panel {
+  display: none;
+  margin: 20px 0;
+}
+.lesson-panel.active {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.lesson-panel .image {
+  flex: 1;
+}
+.lesson-panel .image img {
+  width: 100%;
+  height: 320px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.lesson-panel .content {
+  flex: 1;
+}
+.lesson-type {
+  color: var(--color-blue);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.lesson h3 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+.lesson-description {
+  margin: 0 0 20px;
+  line-height: 1.8;
+}
+.lesson-recommend {
+  background-color: var(--color-light-blue);
+  border-radius: 10px;
+  padding: 20px;
+}
+.lesson-recommend > p {
+  font-weight: 700;
+  color: var(--color-blue);
+  margin: 0;
+}
+.lesson-recommend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lesson-recommend li::before {
+  content: "✔︎";
+  color: var(--color-blue);
+  font-weight: 700;
+  margin-right: 10px;
+}
 
 @media (max-width: 768px) {
   /* ヘッダー */
@@ -502,11 +601,14 @@ nav a {
     grid-template-columns: repeat(2, 1fr);
   }
   .problems h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .problems .card img {
     width: 90px;
     height: 85px;
+  }
+  .problems .card p {
+    font-size: 12px;
   }
   .problems-arrow,
   .problems-message {
@@ -532,6 +634,9 @@ nav a {
   .about h2 {
     margin: 0;
   }
+  .about-content {
+    font-size: 14px;
+  }
   /* 3つの理由 */
   .features {
     padding: 40px 0;
@@ -542,7 +647,7 @@ nav a {
     margin: 0 auto;
   }
   .features h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .features-card {
     grid-template-columns: 1fr;
@@ -552,7 +657,7 @@ nav a {
     top: 0;
   }
   .features .card h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 5px 0;
   }
   .features-text-pc {
@@ -570,6 +675,9 @@ nav a {
     max-width: none;
     margin: 0 auto;
   }
+  .how h2 {
+    font-size: 25px;
+  }
   .how-card {
     grid-template-columns: 1fr;
   }
@@ -586,12 +694,12 @@ nav a {
   }
   .how .card h3 {
     margin: 0 40px;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--color-white);
     background-color: var(--color-blue);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: block;
     align-items: center;
     justify-content: center;
@@ -604,5 +712,38 @@ nav a {
   .how .card p {
     margin: 0;
     font-size: 20px;
+  }
+
+  /* レッスン */
+  .lesson {
+    padding: 40px 0;
+  }
+  .lesson-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .lesson h2 {
+    font-size: 25px;
+  }
+  .lesson-tab button {
+    padding: 12px 5px;
+    font-size: 14px;
+  }
+  .lesson-panel.active {
+    display: block;
+  }
+  .lesson-panel .image {
+    display: none;
+  }
+  .lesson-panel .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .lesson h3 {
+    font-size: 23px;
+  }
+  .lesson-recommend li {
+    font-size: 12px;
   }
 }
