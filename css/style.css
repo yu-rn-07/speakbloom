@@ -115,7 +115,7 @@ nav a {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ヒーロー */
+/* ファーストビュー */
 .hero-mobile-image {
   display: none;
 }
@@ -202,7 +202,7 @@ nav a {
   color: #f5b800;
 }
 
-/* プロブレム */
+/* 悩み */
 .problems {
   padding: 100px 0;
 }
@@ -262,7 +262,7 @@ nav a {
   font-size: 22px;
   font-weight: 700;
 }
-/* アバウト */
+/* サービス紹介 */
 .about-inner {
   display: flex;
   width: calc(100% - 140px);
@@ -285,7 +285,7 @@ nav a {
   font-size: 30px;
 }
 
-/* フィーチャー */
+/* 3つの理由 */
 .features {
   padding: 100px 0;
 }
@@ -340,6 +340,57 @@ nav a {
 .features-text-sp {
   display: none;
 }
+/* 無料体験 */
+.how-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.how h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.how-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.how .card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+.how .card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid var(--color-blue);
+  border-right: 2px solid var(--color-blue);
+  transform: translateY(-50%) rotate(45deg);
+}
+.how .card h3 {
+  margin: 0;
+  font-size: 28px;
+}
+.how .card img {
+  display: block;
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.how .card p {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 12px 10px 0;
+}
 
 @media (max-width: 768px) {
   /* ヘッダー */
@@ -372,7 +423,7 @@ nav a {
     display: flex;
   }
 
-  /* ヒーロー */
+  /* ファーストビュー */
   .hero-mobile-image {
     display: block;
     width: 160%;
@@ -438,7 +489,7 @@ nav a {
     font-size: 20px;
   }
 
-  /* プロブレム */
+  /* 悩み */
   .problems {
     padding: 40px 0;
   }
@@ -461,7 +512,7 @@ nav a {
   .problems-message {
     display: none;
   }
-  /* アバウト */
+  /* サービス紹介 */
   .about {
     padding: 60px 0 40px;
   }
@@ -481,7 +532,7 @@ nav a {
   .about h2 {
     margin: 0;
   }
-  /* フィーチャー */
+  /* 3つの理由 */
   .features {
     padding: 40px 0;
   }
@@ -509,5 +560,49 @@ nav a {
   }
   .features-text-sp {
     display: block;
+  }
+  /* 無料体験 */
+  .how {
+    padding: 40px 0;
+  }
+  .how-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .how-card {
+    grid-template-columns: 1fr;
+  }
+  .how .card {
+    display: flex;
+    align-items: center;
+  }
+  .how .card:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: -26px;
+    transform: translateY(-50%) rotate(135deg);
+  }
+  .how .card h3 {
+    margin: 0 40px;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    width: 60px;
+    height: 60px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+  .how .card img {
+    display: none;
+  }
+  .how .card p {
+    margin: 0;
+    font-size: 20px;
   }
 }
