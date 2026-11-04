@@ -766,6 +766,53 @@ nav a {
   content: "-";
 }
 
+/* CTAセクション */
+.cta {
+  padding: 100px 0;
+}
+.cta-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cta h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.cta-description {
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+.cta-action {
+  width: fit-content;
+  text-align: center;
+  margin: 0 0 30px;
+}
+.cta .cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 9999px;
+  padding: 12px 60px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.cta-note {
+  font-size: 12px;
+  margin: 6px 0 0;
+}
+.sp-br {
+  display: none;
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
@@ -1098,5 +1145,21 @@ nav a {
   .faq-answer p {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  /* CTAセクション */
+  .cta {
+    padding: 40px 0;
+  }
+  .cta-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .cta h2 {
+    font-size: 25px;
+  }
+  .sp-br {
+    display: inline;
   }
 }
