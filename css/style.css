@@ -593,6 +593,107 @@ nav a {
   display: none;
 }
 
+/* 料金プラン */
+.pricing {
+  padding: 100px 0;
+}
+.pricing-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pricing h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.pricing-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing-card .card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+.popular-wrapper {
+  position: relative;
+  height: 100%;
+}
+.popular-wrapper .card {
+  height: 100%;
+}
+.popular-label {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 9999px;
+  padding: 3px 24px;
+  font-size: 15px;
+  white-space: nowrap;
+  z-index: 1;
+}
+.pricing-card .popular {
+  border: 2px solid var(--color-accent);
+}
+.pricing-card .popular .plan-price {
+  color: var(--color-accent);
+}
+.plan-name {
+  background-color: var(--color-light-blue);
+  color: var(--color-main);
+  text-align: center;
+  margin: 0;
+  padding: 16px 0;
+  font-size: 23px;
+}
+.plan-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+}
+.plan-price strong {
+  font-size: 30px;
+}
+.plan-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+.plan-details li {
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+.plan-details li:last-child {
+  border-bottom: none;
+}
+.plan-button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 20px auto 25px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-light-blue);
+  color: var(--color-main);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.popular-wrapper .card .plan-button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
@@ -874,5 +975,23 @@ nav a {
     margin-top: 20px;
     font-weight: 700;
     color: var(--color-main);
+  }
+
+  /* 料金プラン */
+  .pricing {
+    padding: 40px 0;
+  }
+  .pricing-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .pricing h2 {
+    font-size: 25px;
+  }
+  .pricing-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 400px;
   }
 }
