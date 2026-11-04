@@ -119,3 +119,15 @@ window.addEventListener("resize", function () {
 updateButtons();
 updateDots();
 updateCounter();
+
+// FAQアコーディオン
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(function (question) {
+  question.addEventListener("click", function () {
+    const faqItem = question.closest(".faq-item");
+    faqItem.classList.toggle("open");
+    const isOpen = faqItem.classList.contains("open");
+    question.setAttribute("aria-expanded", isOpen);
+  });
+});
