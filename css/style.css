@@ -491,6 +491,108 @@ nav a {
   margin-right: 10px;
 }
 
+/* 利用者の声 */
+.voices-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.voices h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.voices-slider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.voices-window {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+}
+.voices-card {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.4s ease;
+}
+.voices-card .card {
+  flex: 0 0 calc((100% - 80px) / 3);
+  background-color: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.voices-card .card img {
+  width: calc(100% - 30px);
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 8px;
+}
+.voices-card .card h3,
+.voices-card .card p {
+  margin: 0 15px;
+}
+.voices-card .card h3 {
+  font-size: 23px;
+  margin-top: 10px;
+}
+.voices-card .card span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.voices-card .card .voices-detail {
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
+.voices-prev:disabled,
+.voices-next:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.voices-prev,
+.voices-next {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+}
+.voices-dots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.voices-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.voices-dots button.active {
+  background-color: var(--color-main);
+}
+.voices-counter {
+  display: none;
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
@@ -745,5 +847,32 @@ nav a {
   }
   .lesson-recommend li {
     font-size: 12px;
+  }
+
+  /* 利用者の声 */
+  .voices {
+    padding: 40px 0;
+  }
+  .voices-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .voices h2 {
+    font-size: 25px;
+  }
+  .voices-card .card {
+    flex: 0 0 100%;
+  }
+  .voices-dots {
+    display: none;
+  }
+  .voices-counter {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--color-main);
   }
 }

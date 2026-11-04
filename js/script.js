@@ -36,3 +36,86 @@ lessonTabs.forEach(function (tab) {
     });
   });
 });
+
+// 利用者の声
+const prevButton = document.querySelector(".voices-prev");
+const nextButton = document.querySelector(".voices-next");
+const voicesCard = document.querySelector(".voices-card");
+const card = document.querySelector(".voices-card .card");
+const cards = document.querySelectorAll(".voices-card .card");
+const dots = document.querySelectorAll(".voices-dots button");
+const currentPage = document.querySelector(".current-page");
+
+const gap = 40;
+
+let currentIndex = 0;
+let visibleCard = window.innerWidth <= 768 ? 1 : 3;
+let maxIndex = Math.ceil(cards.length / visibleCard) - 1;
+
+function updateButtons() {
+  prevButton.disabled = currentIndex === 0;
+  nextButton.disabled = currentIndex === maxIndex;
+}
+function updateDots() {
+  dots.forEach(function (dot) {
+    dot.classList.remove("active");
+  });
+  if (dots[currentIndex]) {
+    dots[currentIndex].classList.add("active");
+  }
+}
+function updateSlider() {
+  const cardWidth = card.getBoundingClientRect().width;
+  voicesCard.style.transform = `translateX(-${(cardWidth + gap) * visibleCard * currentIndex}px)`;
+}
+function updateCounter() {
+  currentPage.textContent = currentIndex + 1;
+}
+
+nextButton.addEventListener("click", function () {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+
+    updateSlider();
+    updateButtons();
+    updateDots();
+    updateCounter();
+  }
+});
+prevButton.addEventListener("click", function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+
+    updateSlider();
+    updateButtons();
+    updateDots();
+    updateCounter();
+  }
+});
+dots.forEach(function (dot, index) {
+  dot.addEventListener("click", function () {
+    currentIndex = index;
+
+    updateSlider();
+    updateButtons();
+    updateDots();
+    updateCounter();
+  });
+});
+window.addEventListener("resize", function () {
+  visibleCard = window.innerWidth <= 768 ? 1 : 3;
+  maxIndex = Math.ceil(cards.length / visibleCard) - 1;
+
+  if (currentIndex > maxIndex) {
+    currentIndex = maxIndex;
+  }
+
+  updateSlider();
+  updateButtons();
+  updateDots();
+  updateCounter();
+});
+
+updateButtons();
+updateDots();
+updateCounter();
