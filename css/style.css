@@ -1008,6 +1008,19 @@ nav a {
   margin: 0;
 }
 
+/* フッター */
+.site-footer {
+  background-color: var(--color-main);
+  margin-top: 100px;
+  color: var(--color-white);
+  text-align: center;
+  padding: 30px 20px;
+}
+.site-footer p {
+  margin: 0;
+  font-size: 13px;
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
