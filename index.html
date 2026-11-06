@@ -565,46 +565,129 @@
       </section>
 
       <section class="application" id="application">
-        <h2>無料体験に申し込む</h2>
-        <form action="">
-          <div>
-            <label for="name">お名前</label>
-            <input type="text" id="name" name="name" />
-          </div>
-          <div>
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" />
-          </div>
-          <div>
-            <label for="lebel">英会話レベル</label>
-            <input type="radio" id="beginner" name="level" value="beginner" />
-            <label for="beginner">初心者</label>
+        <div class="application-inner">
+          <h2>無料体験に申し込む</h2>
+          <form class="application-form">
+            <div class="form-row">
+              <label for="name">
+                お名前 <span class="required">必須</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="(例)　山田　太郎"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="email">
+                メールアドレス <span class="required">必須</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="(例)　example@mail.com"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-label">
+                英会話レベル <span class="required">必須</span>
+              </div>
+              <fieldset class="form-fieldset">
+                <legend class="visually-hidden">英会話レベル</legend>
+                <div class="radio-options">
+                  <label for="beginner">
+                    <input
+                      type="radio"
+                      id="beginner"
+                      name="level"
+                      value="beginner"
+                      required
+                    />
+                    初心者</label
+                  >
+                  <label for="intermediate">
+                    <input
+                      type="radio"
+                      id="intermediate"
+                      name="level"
+                      value="intermediate"
+                    />
+                    中級者</label
+                  >
+                  <label for="advanced">
+                    <input
+                      type="radio"
+                      id="advanced"
+                      name="level"
+                      value="advanced"
+                    />
+                    上級者</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-row">
+              <div class="form-label">
+                希望コース <span class="required">必須</span>
+              </div>
+              <fieldset class="form-fieldset">
+                <legend class="visually-hidden">希望コース</legend>
+                <div class="radio-options">
+                  <label for="daily">
+                    <input
+                      type="radio"
+                      id="daily"
+                      name="course"
+                      value="daily"
+                      required
+                    />
+                    日常英会話</label
+                  >
+                  <label for="business">
+                    <input
+                      type="radio"
+                      id="business"
+                      name="course"
+                      value="business"
+                    />
+                    ビジネス英会話</label
+                  >
+                  <label for="travel">
+                    <input
+                      type="radio"
+                      id="travel"
+                      name="course"
+                      value="travel"
+                    />
+                    旅行英会話</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-row form-agreement">
+              <span class="form-label">
+                利用規約 <span class="required">必須</span>
+              </span>
+              <div class="agreement-check">
+                <input type="checkbox" id="agree" name="agree" required />
+                <a href="terms.html" target="_blank" rel="noopener noreferrer">
+                  利用規約
+                </a>
+                <label for="agree"> に同意する </label>
+              </div>
+            </div>
             <input
-              type="radio"
-              id="intermediate"
-              name="level"
-              value="intermediate"
+              type="submit"
+              class="cta-button"
+              value="無料体験に申し込む　→"
             />
-            <label for="intermediate">中級者</label>
-            <input type="radio" id="advanced" name="level" value="advanced" />
-            <label type="advanced">上級者</label>
-          </div>
-          <div>
-            <label for="course">希望コース</label>
-            <input type="radio" name="course" value="daily" />日常英会話
-            <input type="radio" name="course" value="business" />ビジネス英会話
-            <input type="radio" name="course" value="travel" />旅行英会話
-          </div>
-          <div>
-            <label for="agree">利用規約</label>
-            <input
-              type="checkbox"
-              name="agree"
-              value="agree"
-            />利用規約に同意する
-          </div>
-          <input type="submit" value="無料体験に申し込む　→" />
-        </form>
+          </form>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </div>
       </section>
     </main>
 

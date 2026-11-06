@@ -131,3 +131,19 @@ faqQuestions.forEach(function (question) {
     question.setAttribute("aria-expanded", isOpen);
   });
 });
+
+// 申し込みフォーム
+const applicationForm = document.querySelector(".application-form");
+const formMessage = document.querySelector(".form-message");
+
+applicationForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  formMessage.textContent =
+    "入力内容を確認しました。これはデモのため、実際の申し込みは行われておりません。";
+  applicationForm.reset();
+  formMessage.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+});

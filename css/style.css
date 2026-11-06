@@ -813,6 +813,201 @@ nav a {
   display: none;
 }
 
+/* 申し込みフォーム */
+.application-inner {
+  width: calc(100% - 140px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.application h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+}
+.application form {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-row > label,
+.form-row > .form-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.form-row input[type="text"],
+.form-row input[type="email"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.form-row .form-fieldset {
+  margin: 0;
+  min-width: 0;
+}
+.radio-options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.radio-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.radio-options input[type="radio"] {
+  margin: 0;
+  flex-shrink: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.required {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #ffe5e2;
+  color: var(--color-accent);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.agreement-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.agreement-check label {
+  cursor: pointer;
+}
+.agreement-check a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.agreement-check a:hover {
+  color: var(--color-main);
+}
+.application .cta-button {
+  display: block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 9999px;
+  border: none;
+  padding: 12px 60px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.form-message {
+  width: 100%;
+  max-width: 960px;
+  margin: 20px auto 0;
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 10px;
+  padding: 20px;
+}
+.form-message:empty {
+  display: none;
+}
+
+/* 利用規約 */
+.terms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+  padding: 20px 70px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-light-blue);
+}
+.terms-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-main);
+  text-decoration: none;
+}
+.terms-back {
+  font-size: 14px;
+  color: var(--color-blue);
+  text-decoration: none;
+}
+.terms-back:hover {
+  color: var(--color-main);
+}
+.terms {
+  padding: 80px 0;
+  background-color: var(--color-bg);
+}
+.terms-inner {
+  width: calc(100% - 140px);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.terms-content {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 15px;
+  padding: 50px;
+}
+.terms h1 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 30px;
+  color: var(--color-main);
+}
+.terms-section {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-light-blue);
+}
+.terms-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.terms-lead {
+  font-size: 16px;
+  margin: 0 0 40px;
+}
+.terms-section h2 {
+  font-size: 20px;
+  color: var(--color-main);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.terms-section p {
+  font-size: 16px;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   /* ヘッダー */
   nav {
@@ -1161,5 +1356,55 @@ nav a {
   }
   .sp-br {
     display: inline;
+  }
+
+  /* 申し込みフォーム */
+  .application {
+    padding: 40px 0;
+  }
+  .application-inner {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .application h2 {
+    font-size: 25px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+  .radio-options {
+    gap: 12px 18px;
+  }
+
+  /* 利用規約 */
+  .terms-header {
+    padding: 15px 20px;
+  }
+  .terms-logo {
+    font-size: 20px;
+  }
+  .terms-back {
+    font-size: 12px;
+  }
+  .terms {
+    padding: 40px 0;
+  }
+  .terms-inner {
+    width: calc(100% - 40px);
+  }
+  .terms h1 {
+    font-size: 26px;
+  }
+  .terms-content {
+    padding: 20px;
+  }
+  .terms-section h2 {
+    font-size: 18px;
+  }
+  .terms-section p {
+    font-size: 14px;
   }
 }
