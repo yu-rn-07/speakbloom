@@ -1158,6 +1158,12 @@ nav a {
   .about-image {
     width: 100%;
   }
+  .about-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 30%;
+  }
   .about-content {
     width: 100%;
   }
@@ -1182,6 +1188,9 @@ nav a {
   .features-card {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+  .features .card img {
+    object-position: center 20%;
   }
   .features-number {
     top: 0;
@@ -1419,5 +1428,10 @@ nav a {
   }
   .terms-section p {
     font-size: 14px;
+  }
+
+  /* フッター */
+  .site-footer {
+    margin-top: 40px;
   }
 }
